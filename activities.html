@@ -79,8 +79,8 @@
     .space-speaker-num { font-size: 0.68rem; font-weight: 700; color: var(--accent); min-width: 20px; }
     .space-speaker-name { font-weight: 700; }
     .space-speaker-handle { font-size: 0.78rem; color: var(--muted); margin-left: 4px; }
-    .speaker-x-btn { margin-left: auto; flex-shrink: 0; display: flex; align-items: center; justify-content: center; width: 30px; height: 30px; border: 1px solid var(--border-light); color: var(--muted); transition: all 0.15s; text-decoration: none; }
-    .speaker-x-btn:hover { border-color: var(--text); color: var(--text); }
+    .speaker-x-btn { margin-left: auto; flex-shrink: 0; display: flex; align-items: center; justify-content: center; gap: 5px; padding: 0 12px; height: 30px; background: #000; border: 1px solid #000; color: #fff; transition: all 0.15s; text-decoration: none; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; }
+    .speaker-x-btn:hover { background: #333; border-color: #333; color: #fff; }
 
     .space-img { width: 100%; height: auto; display: block; border-bottom: 2px solid var(--border); }
     .collab-badge { background: var(--gold); color: #fff; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.10em; padding: 8px 20px; border-bottom: 2px solid var(--border); }
@@ -3755,7 +3755,7 @@
     btn.rel = 'noopener noreferrer';
     btn.className = 'speaker-x-btn';
     btn.setAttribute('aria-label', 'X (Twitter)');
-    btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.741l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>';
+    btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.741l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span>X</span>';
     handle.parentElement.appendChild(btn);
   });
   const stampImages = ['判子/赤アク.png', '判子/青アク.png', '判子/黄アク.png'];
