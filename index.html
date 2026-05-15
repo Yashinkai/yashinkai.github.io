@@ -195,7 +195,7 @@
 
 <!-- ===== Hero ===== -->
 <section id="home" style="padding:0;margin:0;max-width:none;position:relative;overflow:hidden;">
-  <img src="トップページ.png" alt="野心会" style="width:100vw;height:calc(100vh - 64px);display:block;object-fit:cover;object-position:center top;margin-left:calc(50% - 50vw);margin-top:64px;" />
+  <img id="heroImg" src="トップページ.png" alt="野心会" style="width:100vw;height:calc(100vh - 64px);display:block;object-fit:cover;object-position:center top;margin-left:calc(50% - 50vw);margin-top:64px;" />
 </section>
 
 <div class="divider"></div>
@@ -338,6 +338,12 @@
 </footer>
 
 <script>
+  // Hero image random selection
+  (function () {
+    const heroImages = ['トップ（赤）.png', 'トップ（青）.png', 'トップ（黄）.png'];
+    document.getElementById('heroImg').src = heroImages[Math.floor(Math.random() * heroImages.length)];
+  })();
+
   // Loader
   (function () {
     const icons = ['赤アイコン.png', '青アイコン.png', '黄アイコン.png'];
