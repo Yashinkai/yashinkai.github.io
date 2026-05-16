@@ -79,8 +79,11 @@
     .space-speaker-num { font-size: 0.68rem; font-weight: 700; color: var(--accent); min-width: 20px; }
     .space-speaker-name { font-weight: 700; }
     .space-speaker-handle { font-size: 0.78rem; color: var(--muted); margin-left: 4px; }
-    .speaker-x-btn { margin-left: auto; flex-shrink: 0; display: flex; align-items: center; justify-content: center; gap: 5px; padding: 0 12px; height: 30px; background: #000; border: 1px solid #000; color: #fff; transition: all 0.15s; text-decoration: none; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; }
+    .speaker-btns { margin-left: auto; display: flex; gap: 4px; flex-shrink: 0; flex-wrap: wrap; }
+    .speaker-x-btn { display: flex; align-items: center; justify-content: center; gap: 5px; padding: 0 12px; height: 30px; background: #000; border: 1px solid #000; color: #fff; transition: all 0.15s; text-decoration: none; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; }
     .speaker-x-btn:hover { background: #333; border-color: #333; color: #fff; }
+    .speaker-research-btn { display: flex; align-items: center; justify-content: center; padding: 0 10px; height: 30px; border: 1px solid var(--border-light); color: var(--muted); transition: all 0.15s; text-decoration: none; font-size: 0.68rem; font-weight: 700; }
+    .speaker-research-btn:hover { border-color: var(--text); color: var(--text); }
 
     .space-img { width: 100%; height: auto; display: block; border-bottom: 2px solid var(--border); }
     .collab-badge { background: var(--gold); color: #fff; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.10em; padding: 8px 20px; border-bottom: 2px solid var(--border); }
@@ -286,7 +289,7 @@
       <div class="space-body">
         <div class="space-speakers">
           <span class="space-speakers-label">登壇者</span>
-          <div class="space-speaker"><span class="space-speaker-num">①</span><span class="space-speaker-name">籔脇 健司</span><a class="space-speaker-handle" href="https://twitter.com/yabutfu" target="_blank">@yabutfu</a></div>
+          <div class="space-speaker" data-research="researchmap~https://researchmap.jp/yabuwaki|ORCID~https://orcid.org/0000-0002-6856-9952"><span class="space-speaker-num">①</span><span class="space-speaker-name">籔脇 健司</span><a class="space-speaker-handle" href="https://twitter.com/yabutfu" target="_blank">@yabutfu</a></div>
         </div>
         <div class="space-desc">
           <p style="font-size:0.68rem;font-weight:700;letter-spacing:0.14em;color:var(--accent);margin-bottom:8px;">📝 概要</p>
@@ -511,7 +514,7 @@
       <div class="space-body">
         <div class="space-speakers">
           <span class="space-speakers-label">登壇者</span>
-          <div class="space-speaker"><span class="space-speaker-num">①</span><span class="space-speaker-name">長山 洋史</span><a class="space-speaker-handle" href="https://twitter.com/taqutyun" target="_blank">@taqutyun</a></div>
+          <div class="space-speaker" data-research="researchmap~https://researchmap.jp/nagayama|ORCID~https://orcid.org/0000-0002-1763-1330|KAKEN~http://kaken.nii.ac.jp/d/r/00552697.ja.html"><span class="space-speaker-num">①</span><span class="space-speaker-name">長山 洋史</span><a class="space-speaker-handle" href="https://twitter.com/taqutyun" target="_blank">@taqutyun</a></div>
         </div>
         <div class="space-desc">
           <p style="font-size:0.68rem;font-weight:700;letter-spacing:0.14em;color:var(--accent);margin-bottom:8px;">📝 概要</p>
@@ -648,7 +651,7 @@
       <div class="space-body">
         <div class="space-speakers">
           <span class="space-speakers-label">登壇者</span>
-          <div class="space-speaker"><span class="space-speaker-num">①</span><span class="space-speaker-name">金居 督之</span><a class="space-speaker-handle" href="https://twitter.com/kanaimasa" target="_blank">@kanaimasa</a></div>
+          <div class="space-speaker" data-research="researchmap~https://researchmap.jp/kanaimasa"><span class="space-speaker-num">①</span><span class="space-speaker-name">金居 督之</span><a class="space-speaker-handle" href="https://twitter.com/kanaimasa" target="_blank">@kanaimasa</a></div>
         </div>
         <div class="space-desc">
           <p style="font-size:0.68rem;font-weight:700;letter-spacing:0.14em;color:var(--accent);margin-bottom:8px;">📝 概要</p>
@@ -788,8 +791,8 @@
       <div class="space-body">
         <div class="space-speakers">
           <span class="space-speakers-label">登壇者</span>
-          <div class="space-speaker"><span class="space-speaker-num">①</span><span class="space-speaker-name">塩津 裕康</span><a class="space-speaker-handle" href="https://twitter.com/H_SHIOZU" target="_blank">@H_SHIOZU</a></div>
-          <div class="space-speaker"><span class="space-speaker-num">②</span><span class="space-speaker-name">東恩納 拓也</span><a class="space-speaker-handle" href="https://twitter.com/3515_h" target="_blank">@3515_h</a></div>
+          <div class="space-speaker" data-research="researchmap~https://researchmap.jp/hiroyasu.shiozu"><span class="space-speaker-num">①</span><span class="space-speaker-name">塩津 裕康</span><a class="space-speaker-handle" href="https://twitter.com/H_SHIOZU" target="_blank">@H_SHIOZU</a></div>
+          <div class="space-speaker" data-research="researchmap~https://researchmap.jp/higashionna-t|KAKEN~https://nrid.nii.ac.jp/ja/nrid/1000070910743/"><span class="space-speaker-num">②</span><span class="space-speaker-name">東恩納 拓也</span><a class="space-speaker-handle" href="https://twitter.com/3515_h" target="_blank">@3515_h</a></div>
         </div>
         <div class="space-desc">
           <p style="font-size:0.68rem;font-weight:700;letter-spacing:0.14em;color:var(--accent);margin-bottom:8px;">📝 概要</p>
@@ -836,7 +839,7 @@
       <div class="space-body">
         <div class="space-speakers">
           <span class="space-speakers-label">登壇者</span>
-          <div class="space-speaker"><span class="space-speaker-num">①</span><span class="space-speaker-name">田平 隆行</span><a class="space-speaker-handle" href="https://twitter.com/TakayukiTabira" target="_blank">@TakayukiTabira</a></div>
+          <div class="space-speaker" data-research="researchmap~https://researchmap.jp/read0075364"><span class="space-speaker-num">①</span><span class="space-speaker-name">田平 隆行</span><a class="space-speaker-handle" href="https://twitter.com/TakayukiTabira" target="_blank">@TakayukiTabira</a></div>
         </div>
         <div class="space-desc">
           <p style="font-size:0.68rem;font-weight:700;letter-spacing:0.14em;color:var(--accent);margin-bottom:8px;">📝 概要</p>
@@ -1050,8 +1053,8 @@
       <div class="space-body">
         <div class="space-speakers">
           <span class="space-speakers-label">登壇者</span>
-          <div class="space-speaker"><span class="space-speaker-num">①</span><span class="space-speaker-name">武田 智徳</span><a class="space-speaker-handle" href="https://twitter.com/Tomonori_Takeda" target="_blank">@Tomonori_Takeda</a></div>
-          <div class="space-speaker"><span class="space-speaker-num">②</span><span class="space-speaker-name">塚越 大智</span><a class="space-speaker-handle" href="https://twitter.com/tsukakoshi_ot" target="_blank">@tsukakoshi_ot</a></div>
+          <div class="space-speaker" data-research="researchmap~https://researchmap.jp/tomonori-takeda-ot|ORCID~https://orcid.org/0000-0001-6424-1469"><span class="space-speaker-num">①</span><span class="space-speaker-name">武田 智徳</span><a class="space-speaker-handle" href="https://twitter.com/Tomonori_Takeda" target="_blank">@Tomonori_Takeda</a></div>
+          <div class="space-speaker" data-research="researchmap~https://researchmap.jp/tsukakoshi_ot|ORCID~https://orcid.org/0000-0003-0771-325X"><span class="space-speaker-num">②</span><span class="space-speaker-name">塚越 大智</span><a class="space-speaker-handle" href="https://twitter.com/tsukakoshi_ot" target="_blank">@tsukakoshi_ot</a></div>
         </div>
         <div class="space-desc">
           <p style="font-size:0.68rem;font-weight:700;letter-spacing:0.14em;color:var(--accent);margin-bottom:8px;">📝 概要</p>
@@ -1329,7 +1332,7 @@
       <div class="space-body">
         <div class="space-speakers">
           <span class="space-speakers-label">登壇者</span>
-          <div class="space-speaker"><span class="space-speaker-num">①</span><span class="space-speaker-name">鈴木 達也</span><a class="space-speaker-handle" href="https://twitter.com/tatsuoOT" target="_blank">@tatsuoOT</a></div>
+          <div class="space-speaker" data-research="researchmap~https://researchmap.jp/tatsuya-s"><span class="space-speaker-num">①</span><span class="space-speaker-name">鈴木 達也</span><a class="space-speaker-handle" href="https://twitter.com/tatsuoOT" target="_blank">@tatsuoOT</a></div>
         </div>
         <div class="space-desc">
           <p style="font-size:0.68rem;font-weight:700;letter-spacing:0.14em;color:var(--accent);margin-bottom:8px;">📝 概要</p>
@@ -1376,7 +1379,7 @@
       <div class="space-body">
         <div class="space-speakers">
           <span class="space-speakers-label">登壇者</span>
-          <div class="space-speaker"><span class="space-speaker-num">①</span><span class="space-speaker-name">外川 佑</span><a class="space-speaker-handle" href="https://twitter.com/tskstkw" target="_blank">@tskstkw</a></div>
+          <div class="space-speaker" data-research="researchmap~https://researchmap.jp/tasuku-sotokawa"><span class="space-speaker-num">①</span><span class="space-speaker-name">外川 佑</span><a class="space-speaker-handle" href="https://twitter.com/tskstkw" target="_blank">@tskstkw</a></div>
         </div>
         <div class="space-desc">
           <p style="font-size:0.68rem;font-weight:700;letter-spacing:0.14em;color:var(--accent);margin-bottom:8px;">📝 概要</p>
@@ -1423,7 +1426,7 @@
       <div class="space-body">
         <div class="space-speakers">
           <span class="space-speakers-label">登壇者</span>
-          <div class="space-speaker"><span class="space-speaker-num">①</span><span class="space-speaker-name">元廣 惇</span><a class="space-speaker-handle" href="https://twitter.com/motohiro_" target="_blank">@motohiro_</a></div>
+          <div class="space-speaker" data-research="researchmap~https://researchmap.jp/A-motohiro"><span class="space-speaker-num">①</span><span class="space-speaker-name">元廣 惇</span><a class="space-speaker-handle" href="https://twitter.com/motohiro_" target="_blank">@motohiro_</a></div>
         </div>
         <div class="space-desc">
           <p style="margin-bottom:20px;">産業領域における作業療法士の可能性や、これからのキャリアの在り方について、実践的な視点からお話しいただきました。また、今回登壇していただいた元廣先生が著者である「セラピストのキャリアデザイン」は絶賛発売中です。</p>
@@ -1499,10 +1502,10 @@
           <div class="space-speaker"><span class="space-speaker-num">②</span><span class="space-speaker-name">田中 寛之</span><a class="space-speaker-handle" href="https://twitter.com/OThiroyuki" target="_blank">@OThiroyuki</a></div>
           <div class="space-speaker"><span class="space-speaker-num">③</span><span class="space-speaker-name">大野 勘太</span><a class="space-speaker-handle" href="https://twitter.com/ohnoknt1010" target="_blank">@ohnoknt1010</a></div>
           <div class="space-speaker"><span class="space-speaker-num">④</span><span class="space-speaker-name">平山 幸一郎</span><a class="space-speaker-handle" href="https://twitter.com/hirayama614" target="_blank">@hirayama614</a></div>
-          <div class="space-speaker"><span class="space-speaker-num">⑤</span><span class="space-speaker-name">菊池 祐介</span><a class="space-speaker-handle" href="https://x.com/usk_bb" target="_blank">@usk_bb</a></div>
+          <div class="space-speaker" data-research="researchmap~https://researchmap.jp/u-kikuchi|KAKEN~https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-23K19869/"><span class="space-speaker-num">⑤</span><span class="space-speaker-name">菊池 祐介</span><a class="space-speaker-handle" href="https://x.com/usk_bb" target="_blank">@usk_bb</a></div>
 
           <div style="font-size:0.88rem;font-weight:900;letter-spacing:0.08em;color:var(--accent);padding:10px 14px;background:var(--bg3);border-top:1px solid var(--border-light);border-bottom:1px solid var(--border-light);">2nd.「起業家」</div>
-          <div class="space-speaker"><span class="space-speaker-num">①</span><span class="space-speaker-name">元廣 惇</span><a class="space-speaker-handle" href="https://twitter.com/motohiro_" target="_blank">@motohiro_</a></div>
+          <div class="space-speaker" data-research="researchmap~https://researchmap.jp/A-motohiro"><span class="space-speaker-num">①</span><span class="space-speaker-name">元廣 惇</span><a class="space-speaker-handle" href="https://twitter.com/motohiro_" target="_blank">@motohiro_</a></div>
           <div class="space-speaker"><span class="space-speaker-num">②</span><span class="space-speaker-name">永島 たすく</span><a class="space-speaker-handle" href="https://twitter.com/tasuku_0108" target="_blank">@tasuku_0108</a></div>
           <div class="space-speaker"><span class="space-speaker-num">③</span><span class="space-speaker-name">ヨシロー</span><a class="space-speaker-handle" href="https://twitter.com/yoshironoie" target="_blank">@yoshironoie</a></div>
 
@@ -1909,7 +1912,7 @@
       <div class="space-body">
         <div class="space-speakers">
           <span class="space-speakers-label">登壇者</span>
-          <div class="space-speaker"><span class="space-speaker-num">①</span><span class="space-speaker-name">菊池 祐介</span><a class="space-speaker-handle" href="https://twitter.com/usk_bb" target="_blank">@usk_bb</a></div>
+          <div class="space-speaker" data-research="researchmap~https://researchmap.jp/u-kikuchi|KAKEN~https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-23K19869/"><span class="space-speaker-num">①</span><span class="space-speaker-name">菊池 祐介</span><a class="space-speaker-handle" href="https://twitter.com/usk_bb" target="_blank">@usk_bb</a></div>
           <div class="space-speaker"><span class="space-speaker-num">②</span><span class="space-speaker-name">だいちゃん</span><a class="space-speaker-handle" href="https://twitter.com/MyDAIchann" target="_blank">@MyDAIchann</a></div>
           <div class="space-speaker"><span class="space-speaker-num">③</span><span class="space-speaker-name">篠田 謙志朗</span><a class="space-speaker-handle" href="https://twitter.com/shinoda062546" target="_blank">@shinoda062546</a></div>
           <div class="space-speaker"><span class="space-speaker-num">④</span><span class="space-speaker-name">青野 秋平</span></div>
@@ -2036,7 +2039,7 @@
         <div class="space-speakers">
           <span class="space-speakers-label">登壇者</span>
           <div class="space-speaker"><span class="space-speaker-num">①</span><span class="space-speaker-name">小渕 浩平</span><a class="space-speaker-handle" href="https://twitter.com/bc7_ot" target="_blank">@bc7_ot</a></div>
-          <div class="space-speaker"><span class="space-speaker-num">②</span><span class="space-speaker-name">元廣 惇</span><a class="space-speaker-handle" href="https://twitter.com/motohiro_" target="_blank">@motohiro_</a></div>
+          <div class="space-speaker" data-research="researchmap~https://researchmap.jp/A-motohiro"><span class="space-speaker-num">②</span><span class="space-speaker-name">元廣 惇</span><a class="space-speaker-handle" href="https://twitter.com/motohiro_" target="_blank">@motohiro_</a></div>
           <div class="space-speaker"><span class="space-speaker-num">③</span><span class="space-speaker-name">沖田 勇帆</span><a class="space-speaker-handle" href="https://twitter.com/OkitaYuho" target="_blank">@OkitaYuho</a></div>
           <div class="space-speaker"><span class="space-speaker-num">④</span><span class="space-speaker-name">庵本 直矢</span><a class="space-speaker-handle" href="https://twitter.com/naoya_758" target="_blank">@naoya_758</a></div>
           <div class="space-speaker"><span class="space-speaker-num">⑤</span><span class="space-speaker-name">平山 幸一郎</span><a class="space-speaker-handle" href="https://twitter.com/hirayama614" target="_blank">@hirayama614</a></div>
@@ -3794,15 +3797,29 @@
   window.addEventListener('scroll', updateActiveSidebar, { passive: true });
   updateActiveSidebar();
   function switchTab(id, btn){ document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active')); document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active')); document.getElementById('tab-'+id).classList.add('active'); btn.classList.add('active'); }
-  document.querySelectorAll('.space-speaker-handle').forEach(function(handle) {
-    const btn = document.createElement('a');
-    btn.href = handle.href;
-    btn.target = '_blank';
-    btn.rel = 'noopener noreferrer';
-    btn.className = 'speaker-x-btn';
-    btn.setAttribute('aria-label', 'X (Twitter)');
-    btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.741l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span>Xはこちら</span>';
-    handle.parentElement.appendChild(btn);
+  document.querySelectorAll('.space-speaker').forEach(function(speaker) {
+    const handle = speaker.querySelector('.space-speaker-handle');
+    if (!handle) return;
+    const wrapper = document.createElement('span');
+    wrapper.className = 'speaker-btns';
+    const researchData = speaker.getAttribute('data-research');
+    if (researchData) {
+      researchData.split('|').forEach(function(item) {
+        const sep = item.indexOf('~');
+        const label = item.slice(0, sep);
+        const url = item.slice(sep + 1);
+        const rb = document.createElement('a');
+        rb.href = url; rb.target = '_blank'; rb.rel = 'noopener noreferrer';
+        rb.className = 'speaker-research-btn'; rb.textContent = label;
+        wrapper.appendChild(rb);
+      });
+    }
+    const xBtn = document.createElement('a');
+    xBtn.href = handle.href; xBtn.target = '_blank'; xBtn.rel = 'noopener noreferrer';
+    xBtn.className = 'speaker-x-btn'; xBtn.setAttribute('aria-label', 'X (Twitter)');
+    xBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.741l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span>Xはこちら</span>';
+    wrapper.appendChild(xBtn);
+    speaker.appendChild(wrapper);
   });
   const stampImages = ['判子/赤アク.png', '判子/青アク.png', '判子/黄アク.png'];
   document.getElementById('stamp-img').style.backgroundImage = `url('${stampImages[Math.floor(Math.random() * stampImages.length)]}')`;
