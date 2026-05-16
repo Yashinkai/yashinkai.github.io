@@ -244,7 +244,7 @@
       <div class="space-body">
         <div class="space-speakers">
           <span class="space-speakers-label">登壇者</span>
-          <div class="space-speaker"><span class="space-speaker-num">①</span><span class="space-speaker-name">伊藤 大将</span><a class="space-speaker-handle" href="https://twitter.com/ito_daisuke_t" target="_blank">@ito_daisuke_t</a></div>
+          <div class="space-speaker" data-research="researchmap~https://researchmap.jp/ito.daisuke"><span class="space-speaker-num">①</span><span class="space-speaker-name">伊藤 大将</span><a class="space-speaker-handle" href="https://twitter.com/ito_daisuke_t" target="_blank">@ito_daisuke_t</a></div>
         </div>
         <div class="space-desc">
           <p style="font-size:0.68rem;font-weight:700;letter-spacing:0.14em;color:var(--accent);margin-bottom:8px;">📝 概要</p>
@@ -3808,9 +3808,12 @@
         const sep = item.indexOf('~');
         const label = item.slice(0, sep);
         const url = item.slice(sep + 1);
+        const colors = { 'researchmap': '#0066CC', 'ORCID': '#A6CE39', 'KAKEN': '#E85A00' };
         const rb = document.createElement('a');
         rb.href = url; rb.target = '_blank'; rb.rel = 'noopener noreferrer';
         rb.className = 'speaker-research-btn'; rb.textContent = label;
+        const c = colors[label] || '#555';
+        rb.style.background = c; rb.style.borderColor = c; rb.style.color = '#fff';
         wrapper.appendChild(rb);
       });
     }
