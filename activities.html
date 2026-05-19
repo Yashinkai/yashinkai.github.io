@@ -129,6 +129,22 @@
     .footer-nav a:hover { color: var(--bg); }
     .footer-copy { max-width: 1100px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.1); padding: 16px 0; font-size: 0.6rem; letter-spacing: 0.12em; color: rgba(242,238,229,0.3); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;}
 
+    /* Mobile jump sheet (hidden on desktop) */
+    .mobile-jump-btn { display: none; }
+    .mobile-jump-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.45); z-index: 1100; }
+    .mobile-jump-overlay.open { display: block; }
+    .mobile-jump-sheet { position: fixed; bottom: 0; left: 0; right: 0; background: var(--bg); border-top: 2px solid var(--border); z-index: 1200; max-height: 70vh; overflow-y: auto; transform: translateY(100%); transition: transform 0.3s ease; }
+    .mobile-jump-sheet.open { transform: translateY(0); }
+    .mobile-jump-sheet-header { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; border-bottom: 2px solid var(--border); position: sticky; top: 0; background: var(--bg); z-index: 1; }
+    .mobile-jump-sheet-title { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); }
+    .mobile-jump-sheet-close { background: none; border: none; font-size: 1.4rem; cursor: pointer; color: var(--text); line-height: 1; padding: 0 4px; font-family: inherit; }
+    .mobile-jump-group { padding: 14px 20px; border-bottom: 1px solid var(--border-light); }
+    .mobile-jump-group:last-child { border-bottom: none; }
+    .mobile-jump-group-label { font-size: 0.58rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; display: block; }
+    .mobile-jump-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 5px; }
+    .mobile-jump-link { display: flex; align-items: center; justify-content: center; padding: 10px 2px; border: 1px solid var(--border); color: var(--text); font-size: 0.7rem; font-weight: 700; text-decoration: none; background: var(--bg2); transition: all 0.15s; white-space: nowrap; }
+    .mobile-jump-link:active { border-color: var(--accent); color: var(--accent); background: var(--bg3); }
+
     @media (max-width: 768px) {
       nav { padding: 0 20px; }
       .nav-links { display: none !important; }
@@ -144,6 +160,7 @@
       .speaker-btns { width: 100%; margin-left: 0; justify-content: flex-start; margin-top: 2px; }
       footer { padding: 40px 20px 0; }
       .footer-inner { flex-direction: column; gap: 24px; }
+      .mobile-jump-btn { display: flex; position: fixed; bottom: 24px; right: 20px; z-index: 1000; align-items: center; gap: 8px; background: var(--accent); color: #fff; border: none; padding: 13px 20px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; cursor: pointer; font-family: inherit; box-shadow: 0 4px 16px rgba(0,0,0,0.25); border-radius: 40px; }
     }
   </style>
 </head>
@@ -242,6 +259,76 @@
     </div>
   </details>
 
+</div>
+
+<!-- Mobile: セッションジャンプボタン＆シート -->
+<button class="mobile-jump-btn" onclick="openJumpSheet()">☰ 第〇回へ</button>
+<div class="mobile-jump-overlay" id="jumpOverlay" onclick="closeJumpSheet()"></div>
+<div class="mobile-jump-sheet" id="jumpSheet">
+  <div class="mobile-jump-sheet-header">
+    <span class="mobile-jump-sheet-title">Session — 第〇回へ移動</span>
+    <button class="mobile-jump-sheet-close" onclick="closeJumpSheet()">×</button>
+  </div>
+  <div class="mobile-jump-group">
+    <span class="mobile-jump-group-label">第1〜10回</span>
+    <div class="mobile-jump-grid">
+      <a href="#session-1"  class="mobile-jump-link" onclick="closeJumpSheet()">第1回</a>
+      <a href="#session-2"  class="mobile-jump-link" onclick="closeJumpSheet()">第2回</a>
+      <a href="#session-3"  class="mobile-jump-link" onclick="closeJumpSheet()">第3回</a>
+      <a href="#session-4"  class="mobile-jump-link" onclick="closeJumpSheet()">第4回</a>
+      <a href="#session-5"  class="mobile-jump-link" onclick="closeJumpSheet()">第5回</a>
+      <a href="#session-6"  class="mobile-jump-link" onclick="closeJumpSheet()">第6回</a>
+      <a href="#session-7"  class="mobile-jump-link" onclick="closeJumpSheet()">第7回</a>
+      <a href="#session-8"  class="mobile-jump-link" onclick="closeJumpSheet()">第8回</a>
+      <a href="#session-9"  class="mobile-jump-link" onclick="closeJumpSheet()">第9回</a>
+      <a href="#session-10" class="mobile-jump-link" onclick="closeJumpSheet()">第10回</a>
+    </div>
+  </div>
+  <div class="mobile-jump-group">
+    <span class="mobile-jump-group-label">第11〜20回</span>
+    <div class="mobile-jump-grid">
+      <a href="#session-11" class="mobile-jump-link" onclick="closeJumpSheet()">第11回</a>
+      <a href="#session-12" class="mobile-jump-link" onclick="closeJumpSheet()">第12回</a>
+      <a href="#session-13" class="mobile-jump-link" onclick="closeJumpSheet()">第13回</a>
+      <a href="#session-14" class="mobile-jump-link" onclick="closeJumpSheet()">第14回</a>
+      <a href="#session-15" class="mobile-jump-link" onclick="closeJumpSheet()">第15回</a>
+      <a href="#session-16" class="mobile-jump-link" onclick="closeJumpSheet()">第16回</a>
+      <a href="#session-17" class="mobile-jump-link" onclick="closeJumpSheet()">第17回</a>
+      <a href="#session-18" class="mobile-jump-link" onclick="closeJumpSheet()">第18回</a>
+      <a href="#session-19" class="mobile-jump-link" onclick="closeJumpSheet()">第19回</a>
+      <a href="#session-20" class="mobile-jump-link" onclick="closeJumpSheet()">第20回</a>
+    </div>
+  </div>
+  <div class="mobile-jump-group">
+    <span class="mobile-jump-group-label">第21〜30回</span>
+    <div class="mobile-jump-grid">
+      <a href="#session-21" class="mobile-jump-link" onclick="closeJumpSheet()">第21回</a>
+      <a href="#session-22" class="mobile-jump-link" onclick="closeJumpSheet()">第22回</a>
+      <a href="#session-23" class="mobile-jump-link" onclick="closeJumpSheet()">第23回</a>
+      <a href="#session-24" class="mobile-jump-link" onclick="closeJumpSheet()">第24回</a>
+      <a href="#session-25" class="mobile-jump-link" onclick="closeJumpSheet()">第25回</a>
+      <a href="#session-26" class="mobile-jump-link" onclick="closeJumpSheet()">第26回</a>
+      <a href="#session-27" class="mobile-jump-link" onclick="closeJumpSheet()">第27回</a>
+      <a href="#session-28" class="mobile-jump-link" onclick="closeJumpSheet()">第28回</a>
+      <a href="#session-29" class="mobile-jump-link" onclick="closeJumpSheet()">第29回</a>
+      <a href="#session-30" class="mobile-jump-link" onclick="closeJumpSheet()">第30回</a>
+    </div>
+  </div>
+  <div class="mobile-jump-group">
+    <span class="mobile-jump-group-label">第31〜40回</span>
+    <div class="mobile-jump-grid">
+      <a href="#session-31" class="mobile-jump-link" onclick="closeJumpSheet()">第31回</a>
+      <a href="#session-32" class="mobile-jump-link" onclick="closeJumpSheet()">第32回</a>
+      <a href="#session-33" class="mobile-jump-link" onclick="closeJumpSheet()">第33回</a>
+      <a href="#session-34" class="mobile-jump-link" onclick="closeJumpSheet()">第34回</a>
+      <a href="#session-35" class="mobile-jump-link" onclick="closeJumpSheet()">第35回</a>
+      <a href="#session-36" class="mobile-jump-link" onclick="closeJumpSheet()">第36回</a>
+      <a href="#session-37" class="mobile-jump-link" onclick="closeJumpSheet()">第37回</a>
+      <a href="#session-38" class="mobile-jump-link" onclick="closeJumpSheet()">第38回</a>
+      <a href="#session-39" class="mobile-jump-link" onclick="closeJumpSheet()">第39回</a>
+      <a href="#session-40" class="mobile-jump-link" onclick="closeJumpSheet()">第40回</a>
+    </div>
+  </div>
 </div>
 
 <section class="fade-in">
@@ -3790,6 +3877,8 @@
   });
   function toggleMenu(){ document.getElementById('mobileMenu').classList.toggle('open'); document.getElementById('hamburger').classList.toggle('open'); }
   function closeMenu(){ document.getElementById('mobileMenu').classList.remove('open'); document.getElementById('hamburger').classList.remove('open'); }
+  function openJumpSheet(){ document.getElementById('jumpSheet').classList.add('open'); document.getElementById('jumpOverlay').classList.add('open'); }
+  function closeJumpSheet(){ document.getElementById('jumpSheet').classList.remove('open'); document.getElementById('jumpOverlay').classList.remove('open'); }
 
   // Sidebar active state
   const sidebarLinks = document.querySelectorAll('#session-sidebar a');
